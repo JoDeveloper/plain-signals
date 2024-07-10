@@ -16,12 +16,12 @@ class Signal {
 
   set value(var val) {
     _state = val;
-    subscribers.forEach((sub) => sub.call());
+    subscribers.forEach((sub) => sub());
   }
 
   Function effect(Function callback) {
     _subscriber = callback;
-    callback.call();
+    callback();
     _subscriber = null;
 
     return () => {
@@ -42,7 +42,7 @@ void main() {
   variable.value = 5;
   
   variable.value = 25;
-  unsubscribe.call();
+  unsubscribe();
   variable.value = 35;
-  
+
 }
