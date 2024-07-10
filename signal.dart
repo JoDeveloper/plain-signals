@@ -1,7 +1,7 @@
 Function? _subscriber = null;
 
 class Signal {
-  final subscribers = <Function>[];
+  final subscribers = <Function>{};
   dynamic _state;
   Signal(value) {
     _state = value;

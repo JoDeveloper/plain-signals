@@ -1,0 +1,31 @@
+fatal: '/usr/local/monospace/templates/_bundle_unpacker' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+warning: could not read HEAD ref from repo at 'file:///usr/local/monospace/templates/_bundle_unpacker', using 'master'
+fatal: '/usr/local/monospace/templates/_bundle_unpacker' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+error:
+       … while calling the 'derivationStrict' builtin
+
+         at /builtin/derivation.nix:9:12: (source not available)
+
+       … while evaluating derivation 'idx-template'
+         whose name attribute is located at /nix/store/vs3cc9cp1l4883y9g4h70nl0dzr2gzxz-nixpkgs-23.11/nixpkgs/pkgs/stdenv/generic/make-derivation.nix:348:7
+
+       … while evaluating attribute 'text' of derivation 'idx-template'
+
+         at /nix/store/vs3cc9cp1l4883y9g4h70nl0dzr2gzxz-nixpkgs-23.11/nixpkgs/pkgs/build-support/trivial-builders/default.nix:148:16:
+
+          147|     runCommand name
+          148|       { inherit text executable checkPhase allowSubstitutes preferLocalBuild;
+             |                ^
+          149|         passAsFile = [ "text" ];
+
+       (stack trace truncated; use '--show-trace' to show the full trace)
+
+       error: program 'git' failed with exit code 128
