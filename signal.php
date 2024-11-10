@@ -46,8 +46,14 @@ class Signal {
     }
 }
 
+
+function signal($value)
+{
+    return new Signal($value);
+}
+
 // Example usage:
-$signal = new Signal(10);
+$signal = signal(10);
 
 $unsubscribe = $signal->effect(function() use ($signal) {
     echo "Signal value: " . $signal->value . "\n";
